@@ -9,10 +9,10 @@
 
 kolejno komendy
 
-npm install - instalacja zależnośći npm
-bower install - instalacja zależności bower
-grunt serve - budowanie aplikacji i uruchamianie jej na serwerze
+- npm install - instalacja zależnośći npm
+- bower install - instalacja zależności bower
+- grunt serve - budowanie aplikacji i uruchamianie jej na serwerze
 
 ## Testing
 
-grunt test
+- grunt test
