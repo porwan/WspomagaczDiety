@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('wspomagaczDietyApp')
-  .controller('HomeCtrl', function () {
-
+  .controller('HomeCtrl', function (firstService) {
+    firstService.getProduct('dupa');
   });
