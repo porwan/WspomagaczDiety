@@ -1,0 +1,23 @@
+<div class="container">
+  <h2 style="text-align: center;">Dostępne produkty w serwisie</h2>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Kcal</th>
+      <th>Węglowodany [g/100g]</th>
+      <th>Białko [g/100g]</th>
+      <th>Tłuszcz [g/100g]</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="prod in product">
+      <td>{{prod.name}}</td>
+      <td>{{prod.calories}}</td>
+      <td>{{prod.carbohydrates}}</td>
+      <td>{{prod.protein}}</td>
+      <td>{{prod.fat}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

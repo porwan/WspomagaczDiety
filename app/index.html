@@ -20,13 +20,13 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Diet Assistant</a>
+      <a class="navbar-brand" href="#">Wspomagacz Diety</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li><a ui-sref="table">Table</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
+      <li><a ui-sref="search">Wyszukaj</a></li>
+      <li><a ui-sref="allProducts">Wszystkie produkty</a></li>
+      <li><a href="#">Kontakt</a></li>
     </ul>
   </div>
 </nav>
@@ -45,9 +45,11 @@
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/home.js"></script>
-<script src="scripts/service/firstService.js"></script>
+<script src="scripts/controllers/search.js"></script>
+<script src="scripts/controllers/allProducts.js"></script>
+<script src="scripts/service/searchService.js"></script>
+<script src="scripts/service/allProductsService.js"></script>
 <!-- endbuild -->
 </body>
 </html>

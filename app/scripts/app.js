@@ -25,10 +25,16 @@ angular
         controller: 'HomeCtrl'
       })
 
-      .state('table', {
-        url: '/table',
-        templateUrl: 'views/table.html',
-        controller: 'TableCtrl'
+      .state('search', {
+        url: '/search',
+        templateUrl: 'views/search.html',
+        controller: 'SearchCtrl'
+      })
+
+      .state('allProducts', {
+        url: '/all',
+        templateUrl: 'views/allProducts.html',
+        controller: 'AllProductsCtrl'
       })
   }
 );
