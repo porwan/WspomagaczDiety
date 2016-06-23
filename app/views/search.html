@@ -1,11 +1,24 @@
-<div class="container">
+<div class="container" ng-controller="SearchCtrl">
+  <div class="row">
+    <div class="col-lg-3 col-lg-offset-4" style="position:">
+      <label for="search">Wyszukaj produkt:</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="search" ng-model="productName">
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-primary" ng-click="search()">Szukaj</button>
+        </span>
+      </div>
+    </div>
+  </div>
+
   <h2 style="text-align: center;">Dostępne produkty w serwisie</h2>
   <div style="text-align: center;">Znaleziono: {{product.length}}</div>
   <br />
   <table class="table table-bordered">
     <thead>
     <tr>
-      <th>Name</th>
+      <th>Lp.</th>
+      <th>Nazwa</th>
       <th>Kcal</th>
       <th>Węglowodany [g/100g]</th>
       <th>Białko [g/100g]</th>
@@ -14,6 +27,7 @@
     </thead>
     <tbody>
     <tr ng-repeat="prod in product">
+      <td>{{prod.number}}</td>
       <td>{{prod.name}}</td>
       <td>{{prod.calories}}</td>
       <td>{{prod.carbohydrates}}</td>

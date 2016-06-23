@@ -5,7 +5,8 @@
   <table class="table table-bordered">
     <thead>
     <tr>
-      <th>Name</th>
+      <th>Lp.</th>
+      <th>Nazwa</th>
       <th>Kcal</th>
       <th>Węglowodany [g/100g]</th>
       <th>Białko [g/100g]</th>
@@ -14,6 +15,7 @@
     </thead>
     <tbody>
     <tr ng-repeat="prod in product">
+      <td>{{prod.number}}</td>
       <td>{{prod.name}}</td>
       <td>{{prod.callories}}</td>
       <td>{{prod.carbohydrates}}</td>

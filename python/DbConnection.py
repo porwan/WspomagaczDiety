@@ -15,7 +15,8 @@ class DbConnection:
         cursor.execute(query)
 
         for elem in cursor:
-            self.parse_row(elem)
+            count = cursor.rowcount
+            self.parse_row(elem, count)
 
         cursor.close()
         connection.close()
@@ -31,21 +32,24 @@ class DbConnection:
         cursor.execute(query)
 
         for elem in cursor:
-            self.parse_row(elem)
+            count = cursor.rowcount
+            self.parse_row(elem, count)
 
         cursor.close()
         connection.close()
         return self.products
 
-    def parse_row(self, elem):
+    def parse_row(self, elem, count):
         name = str(elem[0]).decode('utf8').replace("-", " ")
         calories = elem[1].decode('utf8')
         carbohydrates = elem[2].decode('utf8')
         protein = elem[3].decode('utf8')
         fat = elem[4].decode('utf8').rstrip('\r')
+        number = count
 
         self.products.append({"name": name,
                               "calories": calories,
                               "carbohydrates": carbohydrates,
                               "protein": protein,
-                              "fat": fat})
+                              "fat": fat,
+                              "number": number})
